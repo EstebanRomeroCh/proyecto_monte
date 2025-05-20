@@ -16,13 +16,7 @@ def conectar(vhost, vuser, vpass, vdb):
 # Ruta para consulta general
 @app.route("/", methods=['GET'])
 def consulta_general():
-    """
-    Consulta general del baúl de contraseñas
-    ---
-    responses:
-      200:
-        description: Lista de registros
-    """
+
     try:
         conn = conectar('localhost', 'root', 'Es1084734914', 'gestor_contrasena') # conexion a la base de datos
         cur = conn.cursor() # cursor para ejecutar consultas
